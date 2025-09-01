@@ -8,7 +8,11 @@ A template project for Apache Spark applications using Scala 3.
 - **Spark 3.5.1** - Latest Spark version with Scala 2.13 cross-compatibility
 - **Assembly plugin** - Create fat JAR for deployment
 - **Test setup** - ScalaTest and spark-testing-base (TODO) configured for unit testing
-- **Formatting and Linting** - Pre-configured Scalafmt and Scalafix (TODO)
+- **Formatting and Linting** - Pre-configured Scalafmt and Scalafix
+
+Note: Spark does not officially support Scala 3. We use cross-compatibility between Scala 2.13 and Scala 3 here to make it work, but I still recommend 2.13 for production use cases. See details in the [Scala 3 with Spark](#scala-3-with-spark) section below.
+
+For a Scala 2.13 version of this template, see [spark-template-scala-2.13](https://github.com/ewoodbury/spark-template-scala-2.13).
 
 
 ## Project Structure
