@@ -1,4 +1,4 @@
-name: Test Scala
+name: Test Lint and Format
 
 on:
   push:
@@ -23,4 +23,6 @@ jobs:
         uses: sbt/setup-sbt@v1
 
       - name: Run tests
-        run: sbt test
+        run: |
+          sbt scalafixAll --check
+          sbt scalafmtCheck
