@@ -4,6 +4,7 @@
 .bloop/
 .idea/
 *.iml
+.bsp/
 
 # SBT
 target/
