@@ -2,6 +2,10 @@ ThisBuild / organization := "com.example"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / scalaVersion := "3.3.6"
 
+// Scalafix settings
+ThisBuild / semanticdbEnabled := true
+ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
+
 lazy val root = (project in file("."))
   .settings(
     name := "scala-spark-template",
@@ -12,7 +16,8 @@ lazy val root = (project in file("."))
       "-feature",
       "-unchecked",
       "-Xfatal-warnings",
-      "-language:higherKinds"
+      "-language:higherKinds",
+      "-Wunused:all"  // Required for scalafix RemoveUnused and OrganizeImports
     ),
     
     // Spark dependencies (provided to reduce jar size)
