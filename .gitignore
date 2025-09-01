@@ -1,0 +1,35 @@
+# IDE and editors
+.vscode/
+.metals/
+.bloop/
+.idea/
+*.iml
+
+# SBT
+target/
+project/target/
+project/project/
+
+# Scala-IDE specific
+.scala_dependencies
+.worksheet
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Spark
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Assembly
+assembly.jar
